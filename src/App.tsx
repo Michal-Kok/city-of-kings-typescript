@@ -1,25 +1,24 @@
-import React from 'react';
-import logo from './logo.svg';
-import './App.css';
+import { BrowserRouter as Router, Switch, Route } from 'react-router-dom';
+import { theme } from './assets/style/theme';
+import { ThemeProvider } from 'styled-components';
+import { GlobalStyle } from './assets/style/GlobalStyle';
+import MainTemplate from './templates/MainTemplate';
+import LandingPage from './pages/LandingPage/LandingPage';
+import Attractions from './pages/Attractions/Attractions';
 
-function App() {
+const App: React.FC = () => {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.tsx</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <Router>
+      <ThemeProvider theme={theme}>
+        <GlobalStyle />
+        <MainTemplate>
+          <Switch>
+            <Route exact path="/" component={LandingPage} />
+            <Route path="/atrakcje" component={Attractions} />
+          </Switch>
+        </MainTemplate>
+      </ThemeProvider>
+    </Router>
   );
 }
 
