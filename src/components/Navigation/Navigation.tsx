@@ -12,10 +12,10 @@ const Navigation: React.FC = () => {
                         Home
                     </StyledLink>
                     <StyledLink to="/atrakcje">
-                        Atrakcje
+                        Attractions
                     </StyledLink>
-                    <StyledLink to="/">
-                        Wkrótce
+                    <StyledLink to="/feedback">
+                        Feedback
                     </StyledLink>
                 </StyledNavigationList>
                 <StyledMediaList>

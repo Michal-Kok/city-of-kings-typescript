@@ -1,6 +1,7 @@
 import Header from '../../components/Header/Header';
 import React from 'react';
-import img from '../../assets/images/placesIMG.jpg'
+import img from '../../assets/images/placesIMG.jpg';
+import MonumentsSection from './MonumentsSection/MonumentsSection';
 
 
 const attractionsHeaderContent = {
@@ -8,14 +9,17 @@ const attractionsHeaderContent = {
     title: 'Zanurz się głębiej'
 }
 
-const Attractions = () => {
+const Attractions: React.FC = () => {
 
     return (
+        <>
         <Header
             headerText={attractionsHeaderContent.headerText}
             title={attractionsHeaderContent.title}
             background={img}
         />
+        <MonumentsSection />
+        </>
     );
 
 }

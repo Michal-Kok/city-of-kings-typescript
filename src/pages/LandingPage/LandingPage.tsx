@@ -2,6 +2,7 @@ import Header from '../../components/Header/Header';
 import React from 'react';
 import LandingPageInformations from './LandingPageInformations/LandingPageInformations';
 import img from '../../assets/images/headerIMG.jpg';
+import Opinions from './Opinions/Opinions';
 
 const headerProps = {
     title: 'Poznaj bliżej Kraków',
@@ -20,6 +21,7 @@ const LandingPage: React.FC = () => {
                 background={img}
             />
             <LandingPageInformations />
+            <Opinions />
         </>
     )
 }

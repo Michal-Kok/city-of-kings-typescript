@@ -5,6 +5,7 @@ import { GlobalStyle } from './assets/style/GlobalStyle';
 import MainTemplate from './templates/MainTemplate';
 import LandingPage from './pages/LandingPage/LandingPage';
 import Attractions from './pages/Attractions/Attractions';
+import Feedback from 'pages/Feedback/Feedback';
 
 const App: React.FC = () => {
   return (
@@ -15,6 +16,7 @@ const App: React.FC = () => {
           <Switch>
             <Route exact path="/" component={LandingPage} />
             <Route path="/atrakcje" component={Attractions} />
+            <Route path="/feedback" component={Feedback} />
           </Switch>
         </MainTemplate>
       </ThemeProvider>

@@ -1,7 +1,7 @@
 import styled from 'styled-components';
 
 export const Wrapper = styled.div`
-    height: 800px;
+    height: 700px;
     width: 100vw;
     padding: 190px 0;
     background-color: ${({ theme }) => theme.colors.grey};

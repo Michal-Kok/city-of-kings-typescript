@@ -30,15 +30,11 @@ const informationItems: Array<Item> = [
 const LandingPageInformations: React.FC = () => {
 
     useEffect(() => {
-        let info: null | Element | HTMLDivElement = document.querySelector(".information");
+        let info: null | HTMLDivElement = document.querySelector(".information");
 
         gsap.registerPlugin(ScrollTrigger);
 
-        if (!info) {
-            info = new HTMLDivElement()
-        }
-
-        gsap.set(info.children, { opacity: 0, y: 150, });
+        gsap.set((info as HTMLDivElement).children, { opacity: 0, y: 150, });
         const tl = gsap.timeline({
             scrollTrigger: {
                 trigger: info,
@@ -47,7 +43,7 @@ const LandingPageInformations: React.FC = () => {
         });
 
         tl.to(
-            info.children,
+            (info as HTMLDivElement).children,
             { opacity: 1, y: 0, stagger: .2, }
         )
     }, [])
